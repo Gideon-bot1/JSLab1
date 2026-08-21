@@ -79,9 +79,53 @@ else
 
 //Task 6
 //Read an assignment 1 mark, an assignment 2 mark and a test mark. Award a Pass if all three are 80 or over, except if the average is 95 or over, in which case award a Merit. Everyone else gets a Fail.
+let assignment1 = Number(prompt("Please enter the mark you got for assignment 1"));
+let assignment2 = Number(prompt("Please enter the mark you got for assignment 2"));
+let test1 = Number(prompt("Please enter the mark you got for test 1"));
 
+if (assignment1 >=80 && assignment2 >=80 && test1 >= 80)
+{
+    console.log("You passed");
+    if ((assignment1 + assignment2 + test1) / 3 >= 95)
+    {
+        console.log("Your overall grade was merit");
+    }
+}
 
+else
+{
+    console.log("You failed");
+}
 
-/*
+//Task 7
+//Read an integer and print exactly one of: Odd, Even but not a multiple of 4, or Multiple of 4. A number is a multiple of 4 when n % 4 === 0.
+let number = Number(prompt("Please enter an integer"));
 
-*/
+if (number % 2 !== 0)
+{
+    console.log("Odd");
+}
+else if (number % 4 === 0)
+{
+    console.log("Multiple of 4");
+}
+else
+{
+    console.log("Even but not a multiple of 4");
+}
+
+//Task 8
+// Using a switch, print City is Wellington for any of the inputs Wgtn, wgtn, WLG or Wellington (stacked cases acting as an OR), and Some other city otherwise.
+
+let city = prompt("Please enter a city:");
+
+switch (city) {
+    case "Wgtn":
+    case "wgtn":
+    case "WLG":
+    case "Wellington":
+        console.log("City is Wellington");
+        break;
+    default:
+        console.log(`${city} is some other city`);
+}
